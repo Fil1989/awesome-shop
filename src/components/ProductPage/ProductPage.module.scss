@@ -1,0 +1,181 @@
+@import '../../styles/variables';
+
+.product_page{
+    display: flex;
+}
+
+.product_image{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 32px;
+    position: relative;
+  
+}
+
+.img_in_list{
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    position: absolute;
+
+
+    &:hover {
+top:-1px;
+left: -1px;
+        box-sizing: content-box;
+        border: 1px solid  $lightgreen;
+        cursor: pointer;
+    }
+}
+
+.main_image{
+  display: block;
+    width: 42.4vw;
+      max-height: 510px;
+          object-fit: contain;
+    object-position: center;
+}
+
+.out_of_stock_center{
+    position: relative;
+  width: 42.4vw;
+    max-height: 510px;
+    margin: 0 100px 0 40px;
+
+}
+
+.out_of_stock{
+    display: block;
+    position: absolute;
+    width: 320px;
+    font-weight: bold;
+font-size: 44px;
+color: #8D8F9A;
+line-height: 160%;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+}
+
+.description_block{
+    width: 292px;
+}
+
+.attributes{
+    margin-top: 43px;
+}
+
+.sizes_block{
+    margin-top: 20px;
+}
+.sizes{
+    display: flex;
+
+}
+.size{
+    display: block;
+    width: 61px;
+    max-height: 45px;
+    border: 1px solid  $black;
+    margin-right: 12px;
+    font-weight: bold;
+text-align: center;
+padding: 12px 0;
+transition: background-color $transition-time $transition-type;
+
+&:hover{
+    background-color:  $black;
+    color:  $white;
+    cursor: pointer;
+}
+}
+
+.sizeActive{
+    background-color:  $black;
+    color:  $white;
+}
+
+.colors_block{
+    margin-top: 24px;
+
+}
+.colors{
+    display: flex;
+    align-items: center;
+}
+
+.color{
+    margin-right: 8px;
+    width: 31px;
+    height: 31px;
+}
+
+.color_link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform $transition-time $transition-type;
+    border: 1px solid black;  
+
+
+    &:hover{
+        width: 32px;
+        height: 32px;
+        padding: 0px;
+        border: 1px solid  $lightgreen;  
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+.price_block{
+    margin-top: 36px;
+}
+
+.price{
+    font-size:24px;
+    font-weight: bold;
+    line-height: 18px;
+    margin-top: 20px;
+}
+
+.add_to_cart{
+    width: 100%;
+    height: 52px;
+    background-color:  $lightgreen;
+        color: $white;
+        border: none;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    position: relative;
+    transition: transform $transition-time $transition-type;
+cursor: pointer;
+& a{
+    color: $white;
+
+}
+
+    &:hover{
+        background-color: $green;
+    }
+}
+
+.add_to_cart__text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.product_description{
+    margin-top: 40px;
+    line-height: 25.59px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}

@@ -1,0 +1,164 @@
+@import '../../styles/variables';
+
+.Amazing_header{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: auto;
+}
+
+.logo_link{
+    text-align: center;
+    position: absolute;
+    padding: 0;
+}
+.logo{
+    width: 31px;
+}
+
+.menu_container, .side_container{
+display: flex;
+justify-content: space-between;
+padding: 0px;
+position: absolute;
+}
+
+.menu_container{
+    left:100px;
+}
+.side_container{
+    right:100px;
+}
+
+.head_menu{
+    display: block;
+    position: relative;
+}
+
+.side_menu{
+    position: relative;
+    margin: 0 19px;
+    cursor: pointer;
+
+}
+.side_menu:first-child{
+display: flex;
+
+
+}
+
+.errow{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.img_currency{
+    display: absolute;
+}
+
+.currency_modal{
+    width: 114px;
+    position:absolute;
+    top:25px;
+    left:20px;
+    border-radius: 2px;
+padding: 0px;
+box-shadow: 1px 1px 20px rgba(2,2,2,0.1), -1px -1px 20px rgba(2,2,2,0.1);
+z-index: 11;
+background-color: $white;
+}
+
+.currency_value {
+    color:  $black;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28.8px;
+    padding: 10px;
+transition: $transition-time $transition-type;
+
+&:hover{
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+}
+
+.currency_sign{
+    font-weight: Bold;
+    display: block;
+    width: 20px;
+    text-align: right;
+}
+
+.if_product_added{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color:  $black;
+    border-radius: 50%;
+    position: absolute;
+    right: -65%;
+    top:-40%;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+text-align: center;
+}
+
+.active_link{
+    color:#5ECE7B;
+    font-weight: bold;
+    padding:30px 16px;
+    text-decoration: none;
+
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color:#5ECE7B;
+        position: absolute;
+        bottom:-30px;
+    }
+}
+.normal_link{
+    padding:30px 16px;
+    text-decoration: none;
+
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color:#5ECE7B;
+        position: absolute;
+        bottom:-30px;
+opacity: 0;
+transform: scaleX(0);
+transition: $transition-time $transition-type;
+    }
+
+    &:hover{
+        color:#5ECE7B;
+        font-weight: bold;   
+        &::after{
+            opacity: 1;
+            transform: scaleX(1);
+        }
+    }
+}
+
+.currency_backdrop{
+    background-color: transparent;
+    z-index: 11;
+      width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
