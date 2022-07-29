@@ -14,6 +14,7 @@ overflow-y: scroll;
 }
 
 .products_in_cart {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
 }

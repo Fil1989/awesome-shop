@@ -33,13 +33,16 @@ class ProductsList extends Component {
           <ul className={styles.list_of_products}>
             {data.category.products.map(
               ({ id, name, inStock, brand, gallery, prices, attributes }) => (
-                <li className={styles.product_item} aria-label={name} key={id}>
+                <li
+                  className={styles.product_item}
+                  style={inStock ? {} : { opacity: 0.5 }}
+                  aria-label={name}
+                  key={id}
+                >
                   <Link
                     to={{
                       pathname: `/${title}/${id}`,
                     }}
-                    className={styles.product_item_link}
-                    style={inStock ? {} : { opacity: 0.5 }}
                   >
                     <div className={styles.out_of_stock_center}>
                       <img
@@ -48,11 +51,16 @@ class ProductsList extends Component {
                         className={styles.product_img}
                       />
                     </div>
-                    <p className={styles.product_name}>
-                      {brand} {name}
-                    </p>
-                    <Price prices={prices} />
                   </Link>
+                  <Link
+                    to={{
+                      pathname: `/${title}/${id}`,
+                    }}
+                    className={styles.product_name}
+                  >
+                    {brand} {name}
+                  </Link>
+                  <Price prices={prices} />
                   {!inStock && (
                     <span className={styles.out_of_stock}>OUT OF STOCK</span>
                   )}

@@ -5,6 +5,7 @@
 }
 
 .product_image{
+    list-style-type: none;
     display: block;
     width: 80px;
     height: 80px;
@@ -74,6 +75,7 @@ line-height: 160%;
     margin-top: 20px;
 }
 .sizes{
+    list-style: none;
     display: flex;
 
 }
@@ -105,6 +107,7 @@ transition: background-color $transition-time $transition-type;
 
 }
 .colors{
+    list-style: none;
     display: flex;
     align-items: center;
 }

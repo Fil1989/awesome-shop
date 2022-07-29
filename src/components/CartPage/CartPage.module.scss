@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 .products_in_cart{
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #E5E5E5;
@@ -30,6 +31,7 @@
 }
 
 .arrow_block{
+    list-style: none;
     display:flex;
     position: absolute;
     bottom: 16px;
@@ -148,7 +150,7 @@ cursor: pointer;
 }
 .in_cart_sizes{
     display: flex;
-
+list-style: none;
 }
 .in_cart_size{
     display: block;
@@ -167,8 +169,7 @@ padding: 12px 0;
 }
 .in_cart_colors{
     display: flex;
-    // align-items: center;
-}
+list-style: none;}
 
 .in_cart_color{
     margin-right: 8px;

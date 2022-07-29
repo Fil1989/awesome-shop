@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color:  $black;
     padding-bottom: 190px;
-
+position: relative;
 }
 
 code {
@@ -66,8 +66,16 @@ button[disabled]{
         pointer-events: none;
 }
 
+button.disabled{
+    pointer-events: auto;
+    cursor:auto;
+    
+    &:hover{
+        background-color: $lightgreen;
+    }
+}
+
 ul{
-  list-style-type: none;
   padding: 0;
   margin:0;
 }
@@ -91,14 +99,13 @@ p{
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  margin: 72px auto;
   position: fixed;
   top:50%;
-  left: 50%;
+  left: 48%;
 
-  -webkit-transform: translate(-50%, -50%, 0);
-  -ms-transform: translate(-50%, -50%, 0);
-  transform: translate(-50%, -50%, 0);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
   animation: load6 1.7s infinite ease, round 1.7s infinite ease;
 }
@@ -167,24 +174,3 @@ p{
   }
 }
 //--------spinner end------------
-
-// -----------scrol bar start-------------
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-// ------scroll bar end------

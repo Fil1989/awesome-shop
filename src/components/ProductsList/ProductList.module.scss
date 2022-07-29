@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .list_of_products{
+    list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 100px;
@@ -9,10 +10,6 @@
 }
 
 .product_item{
-    position: relative;
-}
-
-.product_item_link{
     padding: 10px 1.04vw 16px;
     display: block;
     position: relative;
@@ -57,6 +54,15 @@ cursor: pointer;
 }
 }
 
+.disabled{
+    pointer-events: auto;
+    cursor:auto;
+    
+    &:hover{
+        background-color: $lightgreen;
+    }
+}
+
 .product_img{
     display: block;
     width: 24.7vw;
@@ -69,6 +75,13 @@ cursor: pointer;
 .product_name{
     font-size: 18px;
     line-height: 28.8px;
+    text-decoration: none;
+    color:$black;
+    transition: all $transition-time $transition-type;
+    &:hover{
+color:$green;
+font-weight: bold;
+    }
 }
 
 .price{

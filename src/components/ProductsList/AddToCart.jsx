@@ -65,7 +65,7 @@ class AddToCart extends Component {
             }}
           ></button>
         ) : (
-          <button className={styles.cart_in_list}></button>
+          <button className={`${styles.cart_in_list} disabled`}></button>
         )}
       </>
     );
