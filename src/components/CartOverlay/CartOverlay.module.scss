@@ -139,6 +139,7 @@ margin-top: 8px;
 .in_cart_sizes {
     display: flex;
 margin-top: 8px;
+list-style: none;
 }
 .in_cart_size {
     display: block;
@@ -151,17 +152,6 @@ margin-top: 8px;
     font-weight: bold;
 text-align: center;
 padding: 2px;
-}
-
-.in_cart_colors_block {
-    margin-top: 8px;
-
-}
-.in_cart_colors {
-    display: flex;
-    list-style: none;
-    align-items: center;
-margin-top: 10px;
 }
 
 .in_cart_color {
