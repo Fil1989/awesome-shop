@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./ProductPage.module.scss";
 
-class ProductImages extends Component {
+class ProductImages extends PureComponent {
   state = {
     mainImage: this.props.gallery[0],
   };

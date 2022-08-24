@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./CartOverlay.module.scss";
 
-class PhotosSlider extends Component {
+class PhotosSlider extends PureComponent {
   render() {
     return (
       <div className={styles.pictures}>

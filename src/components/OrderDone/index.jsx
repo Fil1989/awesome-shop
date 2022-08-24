@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./OrderDone.module.scss";
-class OrderDone extends Component {
+class OrderDone extends PureComponent {
   componentDidMount() {}
   render() {
     return (

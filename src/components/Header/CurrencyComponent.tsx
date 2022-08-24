@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { changeCurrency } from "../../redux/actions";
 import { withQueryCurrencies } from "../../hocs";
@@ -10,7 +10,7 @@ interface ICurrencyProps extends PropsFromRedux {
   query: IQueryCurrency;
 }
 
-class CurrencyComponent extends Component<ICurrencyProps> {
+class CurrencyComponent extends PureComponent<ICurrencyProps> {
   onCurrencyClick = (sign: string) => {
     this.props.onChangeCurrency(sign);
     this.props.currencyOpenClose();

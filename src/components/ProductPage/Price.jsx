@@ -1,9 +1,9 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect } from "react-redux";
 import style from "./ProductPage.module.scss";
 import { service } from "../../services";
 
-class Price extends Component {
+class Price extends PureComponent {
   render() {
     service.setPrice(this.props.prices);
     service.setAppCurrency(this.props.appCurrency);

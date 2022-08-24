@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import logo from "../../assets/brand_icon.svg";
 import errowDown from "../../assets/errow.svg";
 import errowUp from "../../assets/errow-up.svg";
@@ -21,7 +21,7 @@ interface IHeaderProps extends PropsFromRedux {
   queryCategories: IQueryCategories;
 }
 
-class Header extends Component<IHeaderProps, IHeaderState> {
+class Header extends PureComponent<IHeaderProps, IHeaderState> {
   state = {
     currencyModal: false,
     cartModal: false,

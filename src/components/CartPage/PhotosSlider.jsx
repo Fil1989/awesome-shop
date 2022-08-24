@@ -1,9 +1,9 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import nextArrow from "../../assets/arrow-next.svg";
 import previousArrow from "../../assets/arrow-previous.svg";
 import styles from "./CartPage.module.scss";
 
-class PhotosSlider extends Component {
+class PhotosSlider extends PureComponent {
   state = {
     num: 0,
   };

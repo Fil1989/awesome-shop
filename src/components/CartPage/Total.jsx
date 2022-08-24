@@ -1,11 +1,11 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect } from "react-redux";
 import styles from "./CartPage.module.scss";
 import { Link } from "react-router-dom";
 import { cleanCart } from "../../redux/actions";
 import { service } from "../../services";
 
-class Total extends Component {
+class Total extends PureComponent {
   render() {
     service.setCart(this.props.cart);
     service.setAppCurrency(this.props.appCurrency);

@@ -1,8 +1,8 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./CartOverlay.module.scss";
 import PriceProductPage from "../ProductPage/Price";
 
-class Price extends Component {
+class Price extends PureComponent {
   render() {
     return <PriceProductPage {...this.props} newStyles={styles} />;
   }

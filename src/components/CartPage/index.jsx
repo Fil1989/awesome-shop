@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect } from "react-redux";
 
 import Attributes from "./Attributes";
@@ -8,7 +8,7 @@ import PhotosSlider from "./PhotosSlider";
 import Total from "./Total";
 import styles from "./CartPage.module.scss";
 
-class CartPage extends Component {
+class CartPage extends PureComponent {
   render() {
     return (
       <section className="container">

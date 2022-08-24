@@ -1,8 +1,8 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./CartOverlay.module.scss";
 import AttributesInCart from "../CartPage/Attributes";
 
-class Attributes extends Component {
+class Attributes extends PureComponent {
   render() {
     return <AttributesInCart {...this.props} newStyle={styles} />;
   }

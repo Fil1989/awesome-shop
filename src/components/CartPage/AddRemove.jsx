@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect } from "react-redux";
 import {
   addNextProduct,
@@ -7,7 +7,7 @@ import {
 } from "../../redux/actions";
 import style from "./CartPage.module.scss";
 
-class AddRemove extends Component {
+class AddRemove extends PureComponent {
   state = {
     numberOfProducts: 1,
   };

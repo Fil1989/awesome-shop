@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./HomePage.module.scss";
 
-class HomePage extends Component {
+class HomePage extends PureComponent {
   render() {
     return (
       <h1 className={`${styles.home} animate__animated animate__jello`}>

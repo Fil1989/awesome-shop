@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import style from "./CartPage.module.scss";
-class Attributes extends Component {
+class Attributes extends PureComponent {
   state = {};
   componentDidMount() {
     this.setState(this.props.chozenAttributes);

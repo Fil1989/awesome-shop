@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { connect } from "react-redux";
 
 import Attributes from "./Attributes";
@@ -8,7 +8,7 @@ import PhotosSlider from "./PhotosSlider";
 import Total from "./Total";
 import styles from "./CartOverlay.module.scss";
 
-class CartOverlay extends Component {
+class CartOverlay extends PureComponent {
   closeCartOverlay = () => {
     this.props.setState((previousState) => ({
       ...previousState,

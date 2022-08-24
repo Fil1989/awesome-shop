@@ -1,10 +1,10 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import uuid from "react-uuid";
 import styles from "./ProductList.module.scss";
 import { connect } from "react-redux";
 import { addProductToCart, ChangeQuantityInCart } from "../../redux/actions";
 
-class AddToCart extends Component {
+class AddToCart extends PureComponent {
   render() {
     const { id, name, inStock, brand, gallery, prices, attributes } =
       this.props.product;

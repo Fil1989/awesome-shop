@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { withParams } from "../../hocs";
 import parse from "html-react-parser";
 import { connect } from "react-redux";
@@ -12,11 +12,11 @@ import styles from "./ProductPage.module.scss";
 import { Routes, Route } from "react-router-dom";
 import WrongWay from "../WrongWay";
 
-class ProductPage extends Component {
+class ProductPage extends PureComponent {
   state = {};
 
   render() {
-    const { loading, error, data } = this.props.query;
+    const { loading, error, data } = this.props.queryProduct;
     if (loading) {
       return <div className="loader">Loading...</div>;
     } else if (error) {
@@ -157,4 +157,4 @@ const mapDispatch = {
 
 const connector = connect(mapState, mapDispatch);
 
-export default connector(withParams(withQueryProduct(ProductPage)));
+export default withParams(withQueryProduct(connector(ProductPage)));

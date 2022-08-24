@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import { Link } from "react-router-dom";
 import { withParams, withQueryCategory } from "../../hocs";
 import Price from "./Price";
@@ -7,7 +7,7 @@ import WrongWay from "../WrongWay";
 import AddToCart from "./AddToCart";
 import styles from "./ProductList.module.scss";
 
-class ProductsList extends Component {
+class ProductsList extends PureComponent {
   componentDidMount() {}
   render() {
     const { title } = this.props.params;

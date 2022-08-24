@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { PureComponent } from "react";
 import styles from "./ProductPage.module.scss";
 
-class Attributes extends Component {
+class Attributes extends PureComponent {
   state = {};
 
   choseAttribute = (id, nameInState) => {
@@ -30,14 +30,10 @@ class Attributes extends Component {
     return (
       <>
         {/*eslint-disable */}
+
         {this.props.attributes.map(({ name, items }) => {
           if (name === "Color") {
-            const nameInState = name.includes(" ")
-              ? name
-                  .split("")
-                  .filter((el) => el !== " ")
-                  .join("")
-              : name;
+            const nameInState = name;
             return (
               <div className={styles.colors_block} key={name}>
                 <h4>{name.toLocaleUpperCase()}:</h4>
@@ -99,7 +95,6 @@ class Attributes extends Component {
                           ...previousState,
                           [nameInState]: true,
                         }));
-                        console.log(this.state);
                         this.choseAttribute(item.id, nameInState);
                       }}
                       aria-label={item.id + " " + name}
